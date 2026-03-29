@@ -220,33 +220,3 @@ body {
     right: 20px;
 }
 
-/* Responsive สำหรับหน้าจอเล็กลง */
-@media (max-width: 900px) {
-    .dashboard-wrapper {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .side-nav {
-        display: flex;
-        gap: 10px;
-    }
-
-    .mood-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ritual {
-        grid-column: span 1;
-    }
-}
