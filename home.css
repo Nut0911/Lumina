@@ -136,7 +136,6 @@ body {
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* แบ่ง 2 คอลัมน์ */
     gap: 25px;
 }
 
@@ -185,7 +184,6 @@ body {
     background: var(--primary);
     color: white;
     grid-column: span 2;
-    /* ยาวเต็ม 2 คอลัมน์ */
     display: flex;
     justify-content: space-between;
     align-items: center;
