@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    color: #2c3e50;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+    align-items: center;
+}
+
+.nav-links a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+.btn-signin {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    padding: 50px 80px;
+    align-items: center;
+}
+
+.content-left { flex: 1; }
+
+.subtitle { letter-spacing: 2px; font-size: 14px; color: #777; }
+
+h1 { font-size: 70px; margin: 10px 0; color: #1a2a3a; }
+
+.description { font-size: 24px; color: #555; margin-bottom: 40px; }
+
+.btn-primary {
+    background: #34495e; color: white;
+    padding: 15px 30px; border-radius: 30px; border: none; cursor: pointer;
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.5);
+    padding: 15px 30px; border-radius: 30px; border: 1px solid #fff; margin-left: 15px;
+}
+
+/* กราฟิกฝั่งขวา */
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-main {
+    width: 400px; height: 400px;
+    background: #0f172a; border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.2);
+}
+
+.glass-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px; border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.streak { top: 10%; right: -20px; }
+.mood { bottom: 10%; left: -30px; }
+.quote { bottom: 20%; right: -40px; width: 150px; font-style: italic; font-size: 12px; }

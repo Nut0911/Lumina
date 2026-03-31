@@ -1,0 +1,197 @@
+/* --- ส่วนเริ่มต้น (Resets & Main body) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* สำคัญ: ทำให้การคำนวณ padding/border ง่ายขึ้น */
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* พื้นหลังข้างนอกหน้าต่างโปรแกรม */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #1a2a3a; /* สีตัวอักษรเข้ม */
+}
+
+/* --- จำลองหน้าต่างโปรแกรมบนโน้ตบุ๊ก (Responsive Container) --- */
+.desktop-container {
+    width: 90%; /* ขยายเกือบเต็มความกว้างจอ */
+    max-width: 1400px; /* จำกัดความกว้างไม่ให้ใหญ่เกินไป */
+    height: 85vh; /* สูงเกือบเต็มหน้าจอ */
+    background-color: #e0e0e0; /* สีพื้นหลังของ App */
+    border-radius: 40px; /* มุมโค้งมนสวยงาม */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1); /* เงาใต้หน้าต่าง */
+    overflow: hidden; /* ไม่ให้เนื้อหาล้นออกมา */
+    display: flex;
+    flex-direction: column; /* จัดองค์ประกอบเป็นแนวตั้ง */
+}
+
+/* --- ส่วนหัว (Header) --- */
+.app-header {
+    height: 90px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #f5f5f5; /* สีพื้นหลังส่วนหัว */
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #1a2a3a;
+    cursor: pointer;
+}
+
+.app-title {
+    font-size: 20px;
+    font-weight: medium;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- พื้นที่ส่วนกลาง (Meditation Area) --- */
+.meditation-area {
+    flex: 1; /* ใช้พื้นที่ที่เหลือทั้งหมด */
+    /* ใส่ภาพพื้นหลังมหาสมุทรแบบ HD */
+    background-image: url('https://images.unsplash.com/photo-1505118380757-91f5f45d8de4?auto=format&fit=crop&w=1500');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* เติมสีเข้มซ้อนบนรูปเพื่อให้วงกลมเด่นขึ้น */
+.meditation-area::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(26, 42, 58, 0.2); /* สีเข้มโปร่งใส */
+}
+
+.meditation-content {
+    position: relative;
+    z-index: 10; /* ให้เนื้อหาอยู่บนชั้นสีเข้ม */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* --- วงกลมหายใจ (Glassmorphism Effect) --- */
+.breathing-circle {
+    width: 400px; /* ขยายขนาดใหญ่ขึ้นสำหรับจอโน้ตบุ๊ก */
+    height: 400px;
+    border-radius: 50%;
+    /* หัวใจหลักของเอฟเฟกต์กระจกฝ้า */
+    background-color: rgba(255, 255, 255, 0.15); /* สีขาวโปร่งใส */
+    backdrop-filter: blur(20px); /* เอฟเฟกต์เบลอพื้นหลัง */
+    -webkit-backdrop-filter: blur(20px); /* สำหรับ Safari */
+    
+    border: 1px solid rgba(255, 255, 255, 0.2); /* ขอบบางๆ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 60px rgba(255,255,255,0.1); /* เงาขาวรอบๆ */
+}
+
+.inhale-text {
+    font-size: 50px;
+    color: white;
+    font-weight: extralight;
+    letter-spacing: 0.1em;
+}
+
+/* --- แถบบอกเวลา --- */
+.timer-tag {
+    background-color: rgba(255, 255, 255, 0.4); /* สีขาวโปร่งใสน้อยกว่า */
+    backdrop-filter: blur(5px);
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.timer-tag p {
+    font-size: 16px;
+    color: white;
+    font-weight: medium;
+}
+
+/* --- แถบควบคุมด้านล่าง (Controls) --- */
+.app-footer {
+    height: 180px;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d8d8d8; /* สีพื้นหลังส่วนควบคุม */
+    border-top: 1px solid #ccc;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.control-icons-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* --- ปุ่ม Play/Pause --- */
+.play-pause-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #7ca0c5; /* สีฟ้า */
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(124,160,197,0.4);
+    transition: transform 0.2s;
+}
+
+.play-pause-btn:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อชี้ */
+}
+
+/* --- ปุ่ม End Session --- */
+.end-session-btn {
+    width: 250px;
+    padding: 18px;
+    border-radius: 30px;
+    border: none;
+    background-color: #bdbdbd; /* สีเทา */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.end-session-btn:hover {
+    background-color: #a0a0a0;
+}
