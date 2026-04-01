@@ -80,6 +80,7 @@ body {
 .welcome-text h1 {
     font-size: 32px;
     margin-bottom: 5px;
+    color: var(--primary);
 }
 
 .welcome-text p {

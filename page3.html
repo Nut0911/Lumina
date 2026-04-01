@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Journal</title>
+  <link rel="stylesheet" href="page3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="dashboard-wrapper">
+    <aside class="sidebar">
+      <div class="logo"><i class="fa-solid fa-hand-holding-heart"></i> Luvina</div>
+      <nav class="side-nav">
+        <a href="/home.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/daily-breath.html"><i class="fa-solid fa-hands-praying"></i> Meditate</a>
+        <a href="/page3.html" class="active"><i class="fa-solid fa-book-open"></i> Journal</a>
+        <a href="#"><i class="fa-solid fa-leaf"></i> Vibe</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="layout">
+        <div class="left-section">
+          <h1 class="h1">What’s on your mind today?</h1>
+          <p class="p">Take a deep breath and let your thoughts flow onto the canvas.</p>
+
+          <div class="textarea-container">
+            <i class="fa-solid fa-wand-magic-sparkles sparkle-icon"></i>
+            <textarea placeholder="Start typing your reflection..."></textarea>
+          </div>
+        </div>
+
+        <aside class="right-controls">
+          <div class="card">
+            <div class="icon-circle">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="card-info">
+              <h3>Private Entry</h3>
+              <p>Only you can view this</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="privateToggle" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="card">
+            <div class="icon-circle">
+              <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class="card-info">
+              <h3>September 12, 2025</h3>
+              <p>4:30 PM • Sunset Session</p>
+            </div>
+          </div>
+
+          <button class="save-btn">Save Entry</button>
+        </aside>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

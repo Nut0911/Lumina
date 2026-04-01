@@ -78,6 +78,10 @@ body {
     align-items: center;
 }
 
+.app-title {
+    color: var(--primary);
+}
+
 /* Meditation Area */
 .meditation-area {
     flex: 1;
