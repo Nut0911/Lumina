@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Breath - Desktop Version</title>
-    <link rel="stylesheet" href="daily-breath.css">
+    <link rel="stylesheet" href="/daily-breath.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <div class="desktop-container">
-        
-        <header class="app-header">
-            <button class="icon-btn back-arrow">←</button>
-            <h1 class="app-title">Daily Breath</h1>
-            <div class="profile-pic">
-                <img src="https://i.pravatar.cc/100" alt="profile picture">
-            </div>
-        </header>
-
-        <main class="meditation-area">
-            <div class="meditation-content">
-                <div class="breathing-circle">
-                    <h2 class="inhale-text">Inhale...</h2>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="logo"><i class="fa-solid fa-hand-holding-heart"></i> Luvina</div>
+            <nav class="side-nav">
+                <a href="/home.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#" class="active"><i class="fa-solid fa-hands-praying"></i> Meditate</a>
+                <a href="#"><i class="fa-solid fa-book-open"></i> Journal</a>
+                <a href="#"><i class="fa-solid fa-leaf"></i></i>Vibe</a>
+            </nav>
+        </aside>
+        <div class="main-container">
+            <header class="app-header">
+                <h1 class="app-title">Daily Breath</h1>
+                <div class="profile-pic">
+    
                 </div>
-                <div class="timer-tag">
-                    <p>4 minutes remaining</p>
+            </header>
+    
+            <main class="meditation-area">
+                <div class="meditation-content">
+                    <div class="breathing-circle">
+                        <h2 class="inhale-text">Inhale...</h2>
+                    </div>
+                    <div class="timer-tag">
+                        <p>4 minutes remaining</p>
+                    </div>
                 </div>
-            </div>
-        </main>
-
-        <footer class="app-footer">
-            <div class="control-icons-group">
-                <button class="icon-btn settings-icon">⚙️</button>
-                
-                <button class="play-pause-btn">
-                    Ⅱ
-                </button>
-                
-                <button class="icon-btn volume-icon">🔊</button>
-            </div>
-            
-            <button class="end-session-btn">End Session</button>
-        </footer>
+            </main>
+    
+            <footer class="app-footer">
+                <div class="control-icons-group">
+                    <div class="icon-btn settings-icon"><i class="fa-solid fa-gear"></i></div>
+    
+                    <button class="play-pause-btn">
+                        Ⅱ
+                    </button>
+    
+                    <div class="icon-btn volume-icon"><i class="fa-solid fa-volume-high"></i></div>
+                </div>
+    
+                <button class="end-session-btn">End Session</button>
+            </footer>
+        </div>
     </div>
 </body>
+
 </html>
